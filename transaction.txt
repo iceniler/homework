@@ -1,0 +1,7 @@
+open 0 50000
+open 11 50000
+charge 0 500 Paninos
+charge 0 45000 UWBookstore
+payment 0 100
+charge 11 60000 Starbucks
+payment 86 1000
