@@ -27,7 +27,7 @@ class Credit:
         if(desc != 'Payment'):
             if(self.cards[cc]['amount'] + amnt < self.cards[cc]['limit']):
                 self.cards[cc]['amount'] + amnt
-                self.cards[cc]['records'].list(0, ('Charge', amnt, desc))
+                self.cards[cc]['records'].insert(0, ('Charge', amnt, desc))
                 return True
         return False
 
