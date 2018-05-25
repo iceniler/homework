@@ -4,11 +4,11 @@ class Credit:
         self.cards = {}
 
     def add_card(self, cc, limit):
-        if(len(str(cc)<16)):
+        if(len(str(cc))>16):
             return False
         if(not self.cards[cc]):
             sum = 0 
-            for x in range(0, 14):
+            for x in range(0, len(str(cc)-2):
                 sum = sum + int(str(cc).index(x))
 
             if(sum%10 == cc%10):
@@ -27,7 +27,7 @@ class Credit:
         if(desc != 'Payment'):
             if(self.cards[cc]['amount'] + amnt < self.cards[cc]['limit']):
                 self.cards[cc]['amount'] + amnt
-                self.cards[cc]['records'].insert(0, ('Charge', amnt, desc))
+                self.cards[cc]['records'].list(0, ('Charge', amnt, desc))
                 return True
         return False
 
@@ -43,3 +43,12 @@ class Credit:
 
     def transcations(self, cc):
         return self.cards[cc][0:10]
+
+    def __contains__(self, cc):
+        return self.cards.__contains__()
+
+    def __iter__(self):
+        return self.cards.__iter__()
+
+    def __len__(self):
+        return self.cards.__len__()
